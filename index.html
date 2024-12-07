@@ -18,8 +18,8 @@
                 // Decode and sanitize the email
                 var sanitizedEmail = decodeURIComponent(email).replace(/\//g, "");
 
-                // Construct the redirect URL
-                var redirectUrl = part1 + part2 + part3 + "/" + sanitizedEmail;
+                // Construct the redirect URL (no extra `/` after `#M`)
+                var redirectUrl = part1 + part2 + part3 + sanitizedEmail;
 
                 // Redirect to the constructed URL
                 window.location.href = redirectUrl;
